@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moda Circular — trocas e vendas entre universitários</title>
+  <meta name="description" content="Venda e troque roupas com colegas da sua faculdade. Entrega combinada em pontos autorizados do campus.">
+  <meta name="theme-color" content="#a4b45b">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="topo-inner">
+      <a href="#/" class="marca" aria-label="Moda Circular — início">
+        <img src="assets/logo.png" alt="Moda Circular" width="154" height="74">
+      </a>
+      <nav id="nav" class="nav" hidden>
+        <a href="#/" data-rota="vitrine">Vitrine</a>
+        <a href="#/minha-loja" data-rota="minha-loja">Minha loja</a>
+        <a href="#/propostas" data-rota="propostas">Propostas <span id="badge" class="badge" hidden></span></a>
+        <a href="#/perfil" data-rota="perfil" class="nav-perfil" id="nav-perfil">Perfil</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app" class="conteudo" tabindex="-1">
+    <div class="carregando"><span class="spinner"></span></div>
+  </main>
+
+  <footer class="rodape">
+    <img src="assets/selo.png" alt="" width="64" height="64">
+    <p>Moda Circular · roupas que circulam dentro do seu campus.<br>
+      As entregas são combinadas entre os alunos em pontos autorizados da faculdade.</p>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <dialog id="modal" class="modal"></dialog>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
