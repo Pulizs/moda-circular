@@ -467,7 +467,8 @@ insert into public.faculdades (nome, sigla) values
   ('Pontifícia Universidade Católica do Paraná', 'PUCPR'),
   ('Universidade de São Paulo', 'USP'),
   ('Universidade Estadual de Campinas', 'UNICAMP'),
-  ('Universidade Federal da Bahia', 'UFBA');
+  ('Universidade Federal da Bahia', 'UFBA'),
+  ('FAE Centro Universitário', 'FAE');
 
 insert into public.pontos_entrega (faculdade_id, nome, descricao)
 select f.id, p.nome, p.descricao
