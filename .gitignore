@@ -1,0 +1,81 @@
+# =====================================================================
+# Moda Circular — arquivos que NUNCA devem ir para o GitHub
+# =====================================================================
+# Observação: js/config.js NÃO está aqui de propósito. Ele só tem a URL do
+# projeto e a chave "publishable" do Supabase, que são públicas por design
+# (o site no GitHub Pages precisa delas). A proteção dos dados vem das
+# regras de Row Level Security do banco.
+#
+# NUNCA coloque no código a chave "service_role" / "sb_secret_..." nem a
+# senha do banco: elas ignoram todas as regras de segurança.
+
+# --- Segredos e variáveis de ambiente ---
+.env
+.env.*
+!.env.example
+*.env
+secrets.*
+*.secret
+*.key
+*.pem
+*.p12
+*.pfx
+credentials*.json
+service-account*.json
+js/config.local.js
+
+# --- Supabase CLI (arquivos locais / temporários) ---
+supabase/.branches/
+supabase/.temp/
+supabase/.env
+supabase/.env.*
+supabase/seed.local.sql
+
+# --- Backups e exportações do banco (podem conter CPFs e dados de alunos) ---
+*.dump
+*.backup
+*.bak
+backup*/
+dump*.sql
+*_backup.sql
+export*/
+*.csv
+*.xlsx
+
+# --- Dependências e builds (caso usem no futuro) ---
+node_modules/
+dist/
+build/
+.cache/
+.parcel-cache/
+.vite/
+
+# --- Logs ---
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Sistema operacional ---
+.DS_Store
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# --- Editores e IDEs ---
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-workspace
+
+# --- Arquivos temporários ---
+tmp/
+temp/
+*.tmp
+*.zip
